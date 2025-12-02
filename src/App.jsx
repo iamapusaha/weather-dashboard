@@ -1,4 +1,4 @@
-import Page from ".Page";
+import Pages from "./Pages";
 import {
   FavouriteProvider,
   LocationProvider,
@@ -10,7 +10,7 @@ function App() {
     <LocationProvider>
       <WeatherProvider>
         <FavouriteProvider>
-          <Page></Page>
+          <Pages />
         </FavouriteProvider>
       </WeatherProvider>
     </LocationProvider>

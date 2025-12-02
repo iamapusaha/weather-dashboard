@@ -12,7 +12,7 @@ import SnowImage from "./assets/backgrounds/sunny.jpg";
 import ThunderStormImage from "./assets/backgrounds/thunderstorm.jpg";
 import WinterImage from "./assets/backgrounds/winter.jpg";
 
-export default function Page() {
+export default function Pages() {
   const { weatherData, loading } = useContext(WeatherContext);
   const [climateImage, setClimateImage] = useState("");
   function getBackgroundImage(climate) {
