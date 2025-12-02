@@ -1,8 +1,9 @@
 import { useState } from "react";
+
 import Favourite from "./Favourite";
 import FavouriteList from "./FavouriteList";
-import Logo from "./logo";
 import Search from "./Search";
+import Logo from "./logo";
 
 export default function Header() {
   const [showModal, setShowModal] = useState(false);

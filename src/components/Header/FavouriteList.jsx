@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { FavouriteContext } from "../../context";
+import { FavouriteContext, LocationContext } from "../../context";
 
 export default function FavouriteList() {
   const { favourites } = useContext(FavouriteContext);
+  const { setSelectedLocation } = useContext(LocationContext);
   return (
     <div className="max-w-xs py-4 bg-white rounded-md border-gray-500 absolute right-0 top-16 text-black shadow-lg ">
       <h3 className="text-lg font-bold px-4">Favourite Locations</h3>
@@ -10,7 +11,9 @@ export default function FavouriteList() {
         {favourites.length > 0 ? (
           favourites.map((item) => (
             <li key={item.location} className="hover:bg-gray-200">
-              {item.location}
+              <a onClick={() => setSelectedLocation({ ...item })}>
+                {item.location}
+              </a>
             </li>
           ))
         ) : (
