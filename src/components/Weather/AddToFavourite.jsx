@@ -6,7 +6,6 @@ import { FavouriteContext, WeatherContext } from "../../context";
 export default function AddToFavourite() {
   const { favourites, addFavourites, removeFavourites } =
     useContext(FavouriteContext);
-  console.log(favourites);
   const [isFavourites, setIsFavourite] = useState(false);
   const { weatherData } = useContext(WeatherContext);
   const { latitude, longitude, location } = weatherData;
