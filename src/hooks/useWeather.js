@@ -70,6 +70,7 @@ const useWeather = () => {
     navigator.geolocation.getCurrentPosition(function (position) {
       fetchWeatherData(position.coords.latitude, position.coords.longitude);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return {
     weatherData,
